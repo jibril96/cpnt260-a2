@@ -1,0 +1,191 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background: #008000;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.btn {
+    background: rgb(153, 57, 57);
+    color: rgba(0, 0, 0, 0.849);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+.btn:hover {
+    color: blueviolet;
+    background: pink;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px; 
+}
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+    background: black;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color:lightgrey;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.main-nav a:hover {
+    background: blue;
+    color: red;
+}
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(fastcar.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: red;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: yellow;
+}
+
+.top-box {
+  background: #006400; 
+  display: grid; 
+  align-items: center;
+  justify-items: center;
+  padding: 1.5rem;
+}
+
+.top-box:hover {
+    color: blue;
+
+}
+
+h4 {
+    color: blue;
+}
+
+.top-box .price {
+    font-size: 2.5rem;
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+    color: yellow;
+}
+.top-box-b {
+    grid-area: top-box-b;
+    color: yellow;
+}
+
+.boxes {
+display: grid;
+grid-gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box {
+    background:rgb(0, 0, 0);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.info {
+   display: grid;
+   grid-gap: 30px;
+   grid-template-columns: repeat(2, 1fr);
+   padding: 3rem;
+}
+
+.speed {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.speed img {
+    width: 100;;
+}
+
+footer {
+    margin-top: 1rem;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+@media(max-width: 700px) {
+    .top-container {
+        grid-template-areas: 
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media(max-width: 500px) {
+    .top-container {
+        grid-template-areas: 
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    }
+}    
